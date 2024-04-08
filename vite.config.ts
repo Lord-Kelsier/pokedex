@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 
 // https://vitejs.dev/config/
-export default ({mode}) => {
+export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return defineConfig({
     plugins: [react()],
@@ -12,7 +12,7 @@ export default ({mode}) => {
       watch: {
         usePolling: true,
         // for windows (wsl2) refresh on save
-      }
+      },
     },
   });
-}
+};
