@@ -41,12 +41,3 @@ export const PokeType = styled.li<{ type: string }>`
   text-align: center;
   width: 73px;
 `;
-
-export const PokeContainer = styled.ul`
-  margin: 0 auto;
-  width: 840px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: #fff;
-`;
