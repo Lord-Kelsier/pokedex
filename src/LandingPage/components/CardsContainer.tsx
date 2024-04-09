@@ -1,4 +1,4 @@
-import { PokeContainer } from './CardStyles';
+import { PokeContainer } from './styled-components/CardStyles';
 import { useFetch } from '../../services/useFetch';
 
 import PokeCard from './PokeCard';

@@ -5,7 +5,7 @@ import {
   PokeName,
   PokeTypeContainer,
   PokeType,
-} from './CardStyles';
+} from './styled-components/CardStyles';
 import { useFetch } from '../../services/useFetch';
 import { DefaultPokemon } from './defaultPokemon';
 
