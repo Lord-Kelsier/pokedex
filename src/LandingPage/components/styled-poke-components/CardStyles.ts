@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import getBackgroundColor from './pokeTypesColor';
 
 export const CardBox = styled.article`
-  width: 270px;
-  height: 370px;
+  width: 200px;
+  height: 300px;
   padding: 0 5px 50px 5px;
 `;
 
@@ -39,5 +39,5 @@ export const PokeType = styled.li<{ type: string }>`
   border-radius: 5px;
   font-size: 80%;
   text-align: center;
-  width: 73px;
+  width: 50px;
 `;

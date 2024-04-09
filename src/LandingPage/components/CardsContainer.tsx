@@ -11,7 +11,7 @@ interface PokemonPreRequestInfo {
 }
 
 function CardsContainer() {
-  const initialUrl = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=0';
+  const initialUrl = 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=0';
   const [nextUrl, setNextUrl] = useState(initialUrl);
   const { data, setData } = useFetch(initialUrl);
   useEffect(() => {
