@@ -1,6 +1,7 @@
 import { PokeContainer, ButtonLoadMore } from './styled-poke-components/ContainerStyles';
 import { useFetch } from '../../services/useFetch';
 import { useEffect, useState } from 'react';
+import { parseFetch } from '../../services/parseFetch';
 
 import PokeCard from './PokeCard';
 
@@ -19,8 +20,7 @@ function CardsContainer() {
     }
   }, [data]);
   const handleLoadMorePokemons = async () => {
-    const response = await fetch(nextUrl);
-    const newData = await response.json();
+    const newData = await parseFetch(nextUrl);
     setNextUrl(newData.next);
     setData({
       count: newData.count,
@@ -29,7 +29,6 @@ function CardsContainer() {
       results: data.results.concat(newData.results),
     });
   };
-  console.log('data', data);
   return (
     <PokeContainer>
       {data?.results.map((pokemon: PokemonPreRequestInfo, index: number) => (

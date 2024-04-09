@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
+import { parseFetch } from './parseFetch';
 
 export function useFetch(url: string) {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data));
+    parseFetch(url).then((data) => setData(data));
   }, []);
   return { data, setData };
 }
