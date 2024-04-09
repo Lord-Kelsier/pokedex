@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from '../../../shared/theme';
 
 export const PokeContainer = styled.ul`
   margin: 0 auto;
@@ -11,5 +12,19 @@ export const PokeContainer = styled.ul`
 `;
 
 export const ButtonLoadMore = styled.button`
-  background-color: blue;
+  background-color: ${Colors.blueButton};
+  font-size: 1.5rem;
+  width: 40%;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  &: hover {
+    background-color: ${Colors.blueButtonHover};
+  }
+  &: active {
+    transform: translateY(4px);
+  }
 `;

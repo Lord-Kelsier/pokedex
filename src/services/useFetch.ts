@@ -7,5 +7,5 @@ export function useFetch(url: string) {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
-  return { data };
+  return { data, setData };
 }
