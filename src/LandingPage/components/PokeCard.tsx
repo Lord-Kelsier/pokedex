@@ -6,7 +6,6 @@ import {
   PokeTypeContainer,
   PokeType,
 } from './CardStyles';
-import { useState, useEffect } from 'react';
 import { useFetch } from '../../services/useFetch';
 import { DefaultPokemon } from './defaultPokemon';
 
