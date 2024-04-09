@@ -3,8 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { CardsContainer } from './components/CardStyles';
-import PokeCard from './components/PokeCard';
+import CardsContainer from './components/CardsContainer';
 
 const BigEmptyBlock = styled.div`
   width: 100%;
@@ -22,14 +21,7 @@ function LandingPage() {
     <div className="landing-page">
       <BigEmptyBlock />
       <CardsSection>
-        <CardsContainer>
-          <PokeCard></PokeCard>
-          <PokeCard></PokeCard>
-          <PokeCard></PokeCard>
-          <PokeCard></PokeCard>
-          <PokeCard></PokeCard>
-          <PokeCard></PokeCard>
-        </CardsContainer>
+        <CardsContainer />
       </CardsSection>
     </div>
   );

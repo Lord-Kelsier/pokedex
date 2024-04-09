@@ -7,12 +7,3 @@ export const CardBox = styled.article`
   height: 280px;
   padding: 0 5px 50px 5px;
 `;
-
-export const CardsContainer = styled.ul`
-  margin: 0 auto;
-  width: 855px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: #fff;
-`;
