@@ -1,38 +1,32 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import { PokeContainer } from './CardStyles';
 
 import PokeCard from './PokeCard';
 
-const Container = styled.ul`
-  margin: 0 auto;
-  width: 855px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: #fff;
-`;
+interface PokemonPreRequestInfo {
+  url: string;
+  name: string;
+}
 
 function CardsContainer() {
-  const [pokemons, setPokemons] = useState([]);
-  const getPokemons = async () => {
+
+  const [pokemons, setPokemons] = useState(Array<PokemonPreRequestInfo>);
+  useEffect(() => {
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=0';
-    const response = await fetch(url);
-    const pokemons = await response.json();
-    setPokemons(pokemons);
-  };
-  getPokemons();
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.results);
+        setPokemons(data.results);
+      });
+  }, []);
 
   return (
-    <Container>
-      {pokemons.map((pokemon) => {
-        <PokeCard
-          id={pokemon.id}
-          name={pokemon.name}
-          imgUrl={pokemon.url}
-          types={pokemon.types}
-        />;
-      })}
-    </Container>
+    <PokeContainer>
+      {pokemons?.map((pokemon, index) => (
+        <PokeCard key={index} pokeUrl={pokemon.url} name={pokemon.name} />
+      ))}
+    </PokeContainer>
   );
 }
 
