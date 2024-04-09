@@ -5,7 +5,7 @@ import {
   PokeName,
   PokeTypeContainer,
   PokeType,
-} from './styled-components/CardStyles';
+} from './styled-poke-components/CardStyles';
 export function DefaultPokemon() {
   return (
     <CardBox>
