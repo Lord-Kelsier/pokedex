@@ -1,5 +1,10 @@
 import { styled } from 'styled-components';
 import Colors from '../../shared/theme';
+import {
+  RowSlab,
+  StatNameText,
+  NonDecoratedList,
+} from './styled-poke-components/InfoStyles';
 
 interface BaseStatsColumnProps {
   className?: string;
@@ -7,23 +12,6 @@ interface BaseStatsColumnProps {
   statAmount: number;
 }
 
-const RowSlab = styled.li<{ key: number; $filled: boolean }>`
-  background-color: ${(props) =>
-    props.$filled ? Colors.baseStatFilled : Colors.baseStatNotFilled};
-  width: 60px;
-  height: 8px;
-  margin: 5px auto;
-`;
-
-const NonDecoratedList = styled.ul`
-  list-style-type: none;
-  padding: 5px;
-  margin-bottom: 0;
-`;
-
-const StatNameText = styled.p`
-  display: inline-block;
-`;
 export default function BaseStatsColumn({
   className,
   statName,

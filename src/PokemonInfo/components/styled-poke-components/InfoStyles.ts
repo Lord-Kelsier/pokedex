@@ -86,3 +86,30 @@ export const BackToPokedexBtn = styled.button`
   font-weight: bold;
   border-radius: 5px;
 `;
+
+export const RowSlab = styled.li<{ key: number; $filled: boolean }>`
+  background-color: ${(props) =>
+    props.$filled ? Colors.baseStatFilled : Colors.baseStatNotFilled};
+  width: 60px;
+  height: 8px;
+  margin: 5px auto;
+`;
+
+export const NonDecoratedList = styled.ul`
+  list-style-type: none;
+  padding: 5px;
+  margin-bottom: 0;
+`;
+
+export const StatNameText = styled.p`
+  display: inline-block;
+`;
+
+export const StatSpan = styled.span`
+  color: white;
+  font-weight: 500;
+  & :last-child {
+    color: black;
+    font-size: 120%;
+  }
+`;

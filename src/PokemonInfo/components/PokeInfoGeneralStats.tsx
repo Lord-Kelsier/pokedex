@@ -1,13 +1,7 @@
 import { styled } from 'styled-components';
 import { useFetch } from '../../services/useFetch';
-const StatSpan = styled.span`
-  color: white;
-  font-weight: 500;
-  & :last-child {
-    color: black;
-    font-size: 120%;
-  }
-`;
+import { StatSpan } from './styled-poke-components/InfoStyles';
+
 interface PokeInfoGeneralStatsProps {
   weight: number;
   height: number;
