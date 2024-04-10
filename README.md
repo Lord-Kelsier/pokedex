@@ -19,15 +19,16 @@ Ademas de docker, en esta aplicacion se utiliza:
 - React con Typescript
 - Styled Components para css
 
-## backlog
+## Avances
 
-- [x] Paginacion de 12 elementos por vez
-- [ ] Mostrar detalle de Pokemon
-- [ ] Deployear en AWS Amplify
-- [ ] Despues de volver del detalle que la paginacion no se haya alterado
+- Paginacion de 12 elementos por vez
+- Mostrar detalle de Pokemon (Parcial). No se encuentran todas estadisticas de la pagina y los estilos no estan completamente logrados
+- Deployear en AWS Amplify
+- Despues de volver del detalle que la paginacion no se haya alterado (Parcial). La paginacion se conserva pero el scroll vuelve al inicio de la pagina
 
-Mis Extras
+## No implementado
 
-- [ ] Sorting
-- [ ] Boton Sorprendeme
-- [ ] Find pokemon
+- Utilizar framework como Next.js
+- Sorting
+- Boton Sorprendeme
+- Find pokemon
