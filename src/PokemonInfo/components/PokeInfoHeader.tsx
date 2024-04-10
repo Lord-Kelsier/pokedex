@@ -10,10 +10,10 @@ export default function PokeInfoHeader({ name, id }: PokeInfoHeaderProps) {
   return (
     <HeaderContainer>
       <TitleContainer>
-        <PokeName weight="500" size="150%">
+        <PokeName $weight="500" $size="150%">
           {name}
         </PokeName>
-        <PokeId weight="bold" size="150%">
+        <PokeId $weight="bold" $size="150%">
           N° {defaultPokeIdParser(id)}
         </PokeId>
       </TitleContainer>

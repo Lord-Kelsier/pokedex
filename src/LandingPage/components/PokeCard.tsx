@@ -44,8 +44,8 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
     <CardBox>
       <NonDecoratedLink to={`pokemon/${name}`}>
         <PokeImage src={pokemonImageUrl} alt={`${name} image`} />
-        <PokeId weight="bold" size="80%">{`N° ${idZeroFilled}`}</PokeId>
-        <PokeName weight="500" size="150%">
+        <PokeId $weight="bold" $size="80%">{`N° ${idZeroFilled}`}</PokeId>
+        <PokeName $weight="500" $size="150%">
           {capitalizedName}
         </PokeName>
         <PokeTypeContainer>{getTypes()}</PokeTypeContainer>
