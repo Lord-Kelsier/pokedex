@@ -13,8 +13,7 @@ import {
 } from './components/styled-poke-components/InfoStyles';
 import PokeInfoBaseStats from './components/PokeInfoBaseStats';
 import PokeInfoDescription from './components/PokeInfoDescription';
-import { useContext } from 'react';
-import { PaginationContext } from '../paginationContext';
+import { useFetch } from '../services/useFetch';
 
 interface PokemonData {
   id: number;
@@ -25,9 +24,9 @@ interface PokemonInfoProps {
 
 export default function PokemonInfo() {
   const { pokeName } = useParams();
-  const { pokemonData } = useContext(PaginationContext);
+  const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
   const name = pokeName !== undefined ? capitalize(pokeName) : 'Not found';
-  const pokemonId = pokemonData.id;
+  const pokemonId = data.id;
   const pokemonImageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
 
   return (
@@ -40,7 +39,7 @@ export default function PokemonInfo() {
             <PokeInfoBaseStats />
           </PokeImageBaseStatsSection>
           <PokeStatsSection>
-            <PokeInfoDescription pokeId={pokemonData.id} />
+            <PokeInfoDescription pokeId={data.id} />
             <PokeStatsStyled />
           </PokeStatsSection>
         </PokeInfoContainer>

@@ -11,10 +11,9 @@ import PokemonInfo from './PokemonInfo/PokemonInfo';
 
 export default function Routing() {
   const [pageData, setPageData] = useState<PageData | null>(null);
-  const pokemonData = defaultPaginationContext.pokemonData;
   return (
     <BrowserRouter>
-      <PaginationContext.Provider value={{ pageData, setPageData, pokemonData }}>
+      <PaginationContext.Provider value={{ pageData, setPageData }}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/pokemon/:pokeName" element={<PokemonInfo />} />
