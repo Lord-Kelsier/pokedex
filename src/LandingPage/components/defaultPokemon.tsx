@@ -1,10 +1,10 @@
 import {
   CardBox,
-  PokeImage,
   PokeId,
+  PokeImage,
   PokeName,
-  PokeTypeContainer,
   PokeType,
+  PokeTypeContainer,
 } from './styled-poke-components/CardStyles';
 export function DefaultPokemon() {
   return (

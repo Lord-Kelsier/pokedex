@@ -1,9 +1,9 @@
-import { PokeContainer, ButtonLoadMore } from './styled-poke-components/ContainerStyles';
-import { useFetch } from '../../services/useFetch';
 import { useEffect, useState } from 'react';
-import { parseFetch } from '../../services/parseFetch';
 
+import { parseFetch } from '../../services/parseFetch';
+import { useFetch } from '../../services/useFetch';
 import PokeCard from './PokeCard';
+import { ButtonLoadMore, PokeContainer } from './styled-poke-components/ContainerStyles';
 
 interface PokemonPreRequestInfo {
   url: string;
