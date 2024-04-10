@@ -7,13 +7,21 @@ export interface PageData {
   results: Array<any>;
 }
 
+interface PokemonData {
+  id: number;
+}
+
 type PageContextType = {
   pageData: PageData | null;
   setPageData: React.Dispatch<React.SetStateAction<PageData | null>>;
+  pokemonData: PokemonData;
 };
 
-const defaultContext = {
+export const defaultPaginationContext = {
   pageData: null,
   setPageData: () => {},
+  pokemonData: {
+    id: 132, //Ditto id
+  },
 };
-export const PaginationContext = createContext<PageContextType>(defaultContext);
+export const PaginationContext = createContext<PageContextType>(defaultPaginationContext);
