@@ -14,6 +14,8 @@ import {
   PokeStatsSection,
 } from './components/styled-poke-components/InfoStyles';
 
+import { NonDecoratedLink } from '../shared/general-styled-components/Link';
+
 const fixDescriptionText = (text: string) => {
   if (text.includes('')) {
     return text.replaceAll('', ' ');
@@ -56,6 +58,9 @@ export default function PokemonInfo() {
             <PokeStats>a</PokeStats>
           </PokeStatsSection>
         </PokeInfoContainer>
+        <NonDecoratedLink to="/" preventScrollReset={false}>
+          back
+        </NonDecoratedLink>
       </PokeInfoSection>
     </>
   );
