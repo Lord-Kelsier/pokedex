@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+
 import { useFetch } from '../../services/useFetch';
 import { StatSpan } from './styled-poke-components/InfoStyles';
 

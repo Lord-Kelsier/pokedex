@@ -2,9 +2,11 @@ import { useParams } from 'react-router-dom';
 
 import capitalize from '../services/pokeApiUtils/capitalize';
 import { useFetch } from '../services/useFetch';
+import { NonDecoratedLink } from '../shared/general-styled-components/Link';
 import { PokeImage } from '../shared/poke-styles/pokeStyles';
 import PokeInfoHeader from './components/PokeInfoHeader';
 import {
+  BackToPokedexBtn,
   PokeBaseStatsStyled,
   PokeDescriptionStyled,
   PokeImageBaseStatsSection,
@@ -12,9 +14,7 @@ import {
   PokeInfoSection,
   PokeStatsSection,
   PokeStatsStyled,
-  BackToPokedexBtn,
 } from './components/styled-poke-components/InfoStyles';
-import { NonDecoratedLink } from '../shared/general-styled-components/Link';
 
 export default function PokemonInfo() {
   const { pokeName } = useParams();

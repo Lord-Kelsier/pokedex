@@ -1,9 +1,10 @@
 import { styled } from 'styled-components';
+
 import Colors from '../../shared/theme';
 import {
+  NonDecoratedList,
   RowSlab,
   StatNameText,
-  NonDecoratedList,
 } from './styled-poke-components/InfoStyles';
 
 interface BaseStatsColumnProps {
