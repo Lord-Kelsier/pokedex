@@ -61,7 +61,7 @@ export const PokeBaseStatsStyled = styled(PokeInfoBaseStats)`
   height: 300px;
   border-radius: 5px;
   display: flex;
-  gap: 5px;
+  justify-content: center;
 `;
 
 export const PokeDescriptionStyled = styled(PokeInfoDescription)`
@@ -74,6 +74,7 @@ export const PokeDescriptionStyled = styled(PokeInfoDescription)`
 export const BaseStatsColumnStyled = styled(BaseStatsColumn)`
   width: 70px;
   text-align: center;
+  margin: 0;
 `;
 
 export const BackToPokedexBtn = styled.button`

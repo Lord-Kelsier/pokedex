@@ -18,6 +18,11 @@ const RowSlab = styled.li<{ key: number; $filled: boolean }>`
 const NonDecoratedList = styled.ul`
   list-style-type: none;
   padding: 5px;
+  margin-bottom: 0;
+`;
+
+const StatNameText = styled.p`
+  display: inline-block;
 `;
 export default function BaseStatsColumn({
   className,
@@ -36,7 +41,7 @@ export default function BaseStatsColumn({
   return (
     <div className={className}>
       <NonDecoratedList>{getRows()}</NonDecoratedList>
-      <p>{statName}</p>
+      <StatNameText>{statName}</StatNameText>
     </div>
   );
 }
