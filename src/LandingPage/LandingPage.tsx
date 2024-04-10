@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import CardsContainer from './components/CardsContainer';
+import { ScrollRestoration } from 'react-router-dom';
 
 const BigEmptyBlock = styled.div`
   width: 100%;
@@ -18,6 +19,7 @@ function LandingPage() {
       <BigEmptyBlock />
       <CardsSection>
         <CardsContainer />
+        <ScrollRestoration />
       </CardsSection>
     </div>
   );

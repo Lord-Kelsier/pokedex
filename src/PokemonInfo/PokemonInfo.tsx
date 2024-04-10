@@ -58,7 +58,7 @@ export default function PokemonInfo() {
             <PokeStats>a</PokeStats>
           </PokeStatsSection>
         </PokeInfoContainer>
-        <NonDecoratedLink to="/" preventScrollReset={false}>
+        <NonDecoratedLink to="/" preventScrollReset={true}>
           back
         </NonDecoratedLink>
       </PokeInfoSection>
