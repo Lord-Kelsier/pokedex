@@ -1,5 +1,7 @@
+import capitalize from '../../services/pokeApiUtils/capitalize';
+import { defaultPokeIdParser } from '../../services/pokeApiUtils/parseId';
 import { useFetch } from '../../services/useFetch';
-import { NonDecoratedLink } from '../../shared/shared-styled-components/Link';
+import { NonDecoratedLink } from '../../shared/general-styled-components/Link';
 import { DefaultPokemon } from './defaultPokemon';
 import {
   CardBox,
@@ -32,10 +34,8 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
   const pokemonTypes = data.types.map(
     (pokemonType: PokemonTypeResponse) => pokemonType.type.name,
   );
-  const idZeroFilled = ('0000' + pokemonId).slice(-4);
-  const firstLetter = name[0];
-  const remainingLetters = name.slice(1);
-  const capitalizedName = firstLetter.toLocaleUpperCase() + remainingLetters;
+  const idZeroFilled = defaultPokeIdParser(pokemonId);
+  const capitalizedName = capitalize(name);
   const getTypes = () =>
     pokemonTypes.map((type: string, index: number) => (
       <PokeType key={index} type={type}>
