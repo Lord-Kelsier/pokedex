@@ -12,7 +12,9 @@ import {
   PokeInfoSection,
   PokeStatsSection,
   PokeStatsStyled,
+  BackToPokedexBtn,
 } from './components/styled-poke-components/InfoStyles';
+import { NonDecoratedLink } from '../shared/general-styled-components/Link';
 
 export default function PokemonInfo() {
   const { pokeName } = useParams();
@@ -38,6 +40,9 @@ export default function PokemonInfo() {
               pokeName={pokeName}
               ability={capitalize(ability)}
             />
+            <NonDecoratedLink to="/">
+              <BackToPokedexBtn>Volver a lista de Pokemones</BackToPokedexBtn>
+            </NonDecoratedLink>
           </PokeStatsSection>
         </PokeInfoContainer>
       </PokeInfoSection>

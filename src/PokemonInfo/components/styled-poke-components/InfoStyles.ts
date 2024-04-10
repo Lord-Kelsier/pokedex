@@ -75,3 +75,13 @@ export const BaseStatsColumnStyled = styled(BaseStatsColumn)`
   width: 70px;
   text-align: center;
 `;
+
+export const BackToPokedexBtn = styled.button`
+  background-color: orange;
+  border: none;
+  margin: 30px 15px;
+  padding: 20px;
+  font-size: 130%;
+  font-weight: bold;
+  border-radius: 5px;
+`;
