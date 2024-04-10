@@ -6,6 +6,10 @@ Comencé utilizando el template de vite: https://github.com/prettier/eslint-plug
 
 Luego dockerize la aplicacion para asegurarme que se comporta de la misma forma en todos los dispositivos que la vayan a ejecutar.
 
+Esta página se encuentra alojada en AWS Amplify y puedes acceder en el siguiente link: https://main.d39w0ornhhbqfs.amplifyapp.com/
+
+## Ejecución
+
 Para ejecutar esta aplicacion debes tener instalado Docker y ejecutar:
 
 `docker compose up`
