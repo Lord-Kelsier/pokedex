@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import getBackgroundColor from '../../../services/pokeApiUtils/pokeTypesColor';
+import Colors from '../../../shared/theme';
 
 const jumpAnimation = keyframes`
  0% { transform: translateY(0); }
@@ -24,7 +25,7 @@ export const PokeImage = styled.img`
 `;
 
 export const PokeId = styled.p`
-  color: #919191;
+  color: ${Colors.idColor};
   font-family: 'Flexo-Bold', arial, sans-serif;
   font-size: 80%;
   font-weight: bold;
