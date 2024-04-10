@@ -1,7 +1,7 @@
-import { useEffect, useState, useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
-import { parseFetch } from './parseFetch';
 import { PaginationContext } from '../paginationContext';
+import { parseFetch } from './parseFetch';
 
 export function useFetch(url: string) {
   const [data, setData] = useState<any>(null);

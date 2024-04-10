@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
 
+import { PaginationContext } from '../../paginationContext';
 import { parseFetch } from '../../services/parseFetch';
 import { useFetch, useFetchWithPaginationContext } from '../../services/useFetch';
 import PokeCard from './PokeCard';
 import { ButtonLoadMore, PokeContainer } from './styled-poke-components/ContainerStyles';
-import { PaginationContext } from '../../paginationContext';
 
 interface PokemonPreRequestInfo {
   url: string;

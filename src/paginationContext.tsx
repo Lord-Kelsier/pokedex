@@ -14,6 +14,8 @@ type PageContextType = {
 
 export const defaultPaginationContext = {
   pageData: null,
-  setPageData: () => {},
+  setPageData: () => {
+    return;
+  },
 };
 export const PaginationContext = createContext<PageContextType>(defaultPaginationContext);

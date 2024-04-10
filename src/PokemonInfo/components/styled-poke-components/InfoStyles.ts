@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import PokeInfoGeneralStats from '../PokeInfoGeneralStats';
 
 import Colors from '../../../shared/theme';
+import PokeInfoGeneralStats from '../PokeInfoGeneralStats';
 
 export const HeaderContainer = styled.header`
   background-color: black;

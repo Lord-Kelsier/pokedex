@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './LandingPage/LandingPage';
 import {
-  PaginationContext,
-  PageData,
   defaultPaginationContext,
+  PageData,
+  PaginationContext,
 } from './paginationContext';
 import PokemonInfo from './PokemonInfo/PokemonInfo';
 

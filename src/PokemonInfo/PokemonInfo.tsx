@@ -2,7 +2,10 @@ import { useParams } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 import capitalize from '../services/pokeApiUtils/capitalize';
+import { useFetch } from '../services/useFetch';
 import { PokeImage } from '../shared/poke-styles/pokeStyles';
+import PokeInfoBaseStats from './components/PokeInfoBaseStats';
+import PokeInfoDescription from './components/PokeInfoDescription';
 import PokeInfoHeader from './components/PokeInfoHeader';
 import {
   PokeImageBaseStatsSection,
@@ -11,9 +14,6 @@ import {
   PokeStatsSection,
   PokeStatsStyled,
 } from './components/styled-poke-components/InfoStyles';
-import PokeInfoBaseStats from './components/PokeInfoBaseStats';
-import PokeInfoDescription from './components/PokeInfoDescription';
-import { useFetch } from '../services/useFetch';
 
 interface PokemonData {
   id: number;

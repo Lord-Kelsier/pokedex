@@ -32,8 +32,6 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
   const pokemonTypes = data.types.map(
     (pokemonType: PokemonTypeResponse) => pokemonType.type.name,
   );
-  const idZeroFilled = defaultPokeIdParser(pokemonId);
-  const capitalizedName = capitalize(name);
   const getTypes = () =>
     pokemonTypes.map((type: string, index: number) => (
       <PokeType key={index} type={type}>
@@ -44,9 +42,11 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
     <CardBox>
       <NonDecoratedLink to={`pokemon/${name}`}>
         <PokeImage src={pokemonImageUrl} alt={`${name} image`} />
-        <PokeId $weight="bold" $size="80%">{`N° ${idZeroFilled}`}</PokeId>
+        <PokeId $weight="bold" $size="80%">{`N° ${defaultPokeIdParser(
+          pokemonId,
+        )}`}</PokeId>
         <PokeName $weight="500" $size="150%">
-          {capitalizedName}
+          {capitalize(name)}
         </PokeName>
         <PokeTypeContainer>{getTypes()}</PokeTypeContainer>
       </NonDecoratedLink>
