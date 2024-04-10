@@ -15,18 +15,11 @@ import {
   PokeStatsStyled,
 } from './components/styled-poke-components/InfoStyles';
 
-interface PokemonData {
-  id: number;
-}
-interface PokemonInfoProps {
-  pokemonData: PokemonData;
-}
-
 export default function PokemonInfo() {
   const { pokeName } = useParams();
   const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
   const name = pokeName !== undefined ? capitalize(pokeName) : 'Not found';
-  const pokemonId = data.id;
+  const pokemonId = data !== null ? data.id : 132; // ditto id
   const pokemonImageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
 
   return (
@@ -39,8 +32,8 @@ export default function PokemonInfo() {
             <PokeInfoBaseStats />
           </PokeImageBaseStatsSection>
           <PokeStatsSection>
-            <PokeInfoDescription pokeId={data.id} />
-            <PokeStatsStyled />
+            <PokeInfoDescription pokeId={pokemonId} />
+            <PokeStatsStyled weight={data?.weight} height={data?.height} />
           </PokeStatsSection>
         </PokeInfoContainer>
       </PokeInfoSection>
