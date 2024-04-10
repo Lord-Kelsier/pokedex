@@ -67,4 +67,9 @@ export const PokeBaseStatsStyled = styled(PokeInfoBaseStats)`
   border-radius: 5px;
 `;
 
-export const PokeDescriptionStyled = styled(PokeInfoDescription)``;
+export const PokeDescriptionStyled = styled(PokeInfoDescription)`
+  margin: 10px;
+  padding: 5px;
+  font-size: 130%;
+  margin-bottom: 50px;
+`;
