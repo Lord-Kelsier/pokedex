@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+
 import getBackgroundColor from './pokeTypesColor';
 
 const jumpAnimation = keyframes`
@@ -10,6 +11,7 @@ export const CardBox = styled.article`
   width: 200px;
   height: 300px;
   padding: 0 5px 50px 5px;
+  cursor: pointer;
   &: hover {
     animation-name: ${jumpAnimation};
     animation-duration: 0.2s;

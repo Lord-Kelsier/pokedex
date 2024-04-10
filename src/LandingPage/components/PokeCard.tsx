@@ -1,13 +1,14 @@
+import { useFetch } from '../../services/useFetch';
+import { NonDecoratedLink } from '../../shared/shared-styled-components/Link';
+import { DefaultPokemon } from './defaultPokemon';
 import {
   CardBox,
-  PokeImage,
   PokeId,
+  PokeImage,
   PokeName,
-  PokeTypeContainer,
   PokeType,
+  PokeTypeContainer,
 } from './styled-poke-components/CardStyles';
-import { useFetch } from '../../services/useFetch';
-import { DefaultPokemon } from './defaultPokemon';
 
 interface PokeCardArgument {
   pokeUrl: string;
@@ -43,10 +44,12 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
     ));
   return (
     <CardBox>
-      <PokeImage src={pokemonImageUrl} alt={`${name} image`} />
-      <PokeId>{`N° ${idZeroFilled}`}</PokeId>
-      <PokeName>{capitalizedName}</PokeName>
-      <PokeTypeContainer>{getTypes()}</PokeTypeContainer>
+      <NonDecoratedLink to={`pokemon/${name}`}>
+        <PokeImage src={pokemonImageUrl} alt={`${name} image`} />
+        <PokeId>{`N° ${idZeroFilled}`}</PokeId>
+        <PokeName>{capitalizedName}</PokeName>
+        <PokeTypeContainer>{getTypes()}</PokeTypeContainer>
+      </NonDecoratedLink>
     </CardBox>
   );
 }
