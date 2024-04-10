@@ -3,15 +3,15 @@ import { styled } from 'styled-components';
 
 import capitalize from '../services/pokeApiUtils/capitalize';
 import { useFetch } from '../services/useFetch';
-import PokeInfoHeader from './components/PokeInfoHeader';
 import { PokeImage } from '../shared/poke-styles/pokeStyles';
 import Colors from '../shared/theme';
+import PokeInfoHeader from './components/PokeInfoHeader';
 import {
-  PokeInfoSection,
-  PokeInfoContainer,
-  PokeImageBaseStatsSection,
-  PokeStatsSection,
   BaseStats,
+  PokeImageBaseStatsSection,
+  PokeInfoContainer,
+  PokeInfoSection,
+  PokeStatsSection,
 } from './components/styled-poke-components/InfoStyles';
 
 const fixDescriptionText = (text: string) => {
