@@ -9,7 +9,6 @@ const BigEmptyBlock = styled.div`
 `;
 
 const CardsSection = styled.section`
-  justify-content: center;
   background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
 `;
 

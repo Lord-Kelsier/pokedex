@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
 import getBackgroundColor from '../../../services/pokeApiUtils/pokeTypesColor';
-import Colors from '../../../shared/theme';
 
 const jumpAnimation = keyframes`
  0% { transform: translateY(0); }
