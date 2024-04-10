@@ -74,5 +74,4 @@ export const PokeDescriptionStyled = styled(PokeInfoDescription)`
 export const BaseStatsColumnStyled = styled(BaseStatsColumn)`
   width: 70px;
   text-align: center;
-  border: 1px solid red;
 `;
