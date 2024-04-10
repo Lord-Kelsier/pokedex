@@ -4,6 +4,7 @@ import Colors from '../../../shared/theme';
 import PokeInfoGeneralStats from '../PokeInfoGeneralStats';
 import PokeInfoBaseStats from '../PokeInfoBaseStats';
 import PokeInfoDescription from '../PokeInfoDescription';
+import BaseStatsColumn from '../BaseStatsColumn';
 
 export const HeaderContainer = styled.header`
   background-color: black;
@@ -44,12 +45,6 @@ export const PokeStatsSection = styled.section`
   flex-basis: 0;
 `;
 
-export const BaseStats = styled.article`
-  background-color: ${Colors.baseStatsBackground};
-  height: 300px;
-  border-radius: 5px;
-`;
-
 export const PokeStatsStyled = styled(PokeInfoGeneralStats)`
   background-color: ${Colors.pokeStatsBackground};
   margin: 10px;
@@ -65,6 +60,8 @@ export const PokeBaseStatsStyled = styled(PokeInfoBaseStats)`
   background-color: ${Colors.baseStatsBackground};
   height: 300px;
   border-radius: 5px;
+  display: flex;
+  gap: 5px;
 `;
 
 export const PokeDescriptionStyled = styled(PokeInfoDescription)`
@@ -72,4 +69,10 @@ export const PokeDescriptionStyled = styled(PokeInfoDescription)`
   padding: 5px;
   font-size: 130%;
   margin-bottom: 50px;
+`;
+
+export const BaseStatsColumnStyled = styled(BaseStatsColumn)`
+  width: 70px;
+  text-align: center;
+  border: 1px solid red;
 `;

@@ -1,3 +1,5 @@
+import { BaseStatsColumnStyled } from './styled-poke-components/InfoStyles';
+
 type StatDescription = {
   name: string;
   url: string;
@@ -16,7 +18,7 @@ export default function PokeInfoBaseStats({
   className,
   baseStats,
 }: PokeInfoBaseStatsProps) {
-  const defaultStats: Record<string, number> = {
+  const stats: Record<string, number> = {
     hp: 0,
     attack: 0,
     defense: 0,
@@ -26,13 +28,23 @@ export default function PokeInfoBaseStats({
   };
   if (baseStats !== undefined) {
     baseStats.forEach((stat) => {
-      defaultStats[stat.stat.name] = stat.base_stat;
+      stats[stat.stat.name] = stat.base_stat;
     });
   }
   return (
     <div className={className}>
-      <h1>BaseStats</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <BaseStatsColumnStyled statName="HP" statAmount={stats['hp']} />
+      <BaseStatsColumnStyled statName="Attack" statAmount={stats['attack']} />
+      <BaseStatsColumnStyled statName="Defense" statAmount={stats['defense']} />
+      <BaseStatsColumnStyled
+        statName="Special Attack"
+        statAmount={stats['special-attack']}
+      />
+      <BaseStatsColumnStyled
+        statName="Special Defense"
+        statAmount={stats['special-defense']}
+      />
+      <BaseStatsColumnStyled statName="Speed" statAmount={stats['speed']} />
     </div>
   );
 }
