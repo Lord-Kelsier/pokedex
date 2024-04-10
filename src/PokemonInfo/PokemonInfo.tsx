@@ -40,7 +40,7 @@ export default function PokemonInfo() {
   const pokemonId = data === null ? 132 : data.id; // ditto id (132) in case pokemon not found
   const pokemonImageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
   const description: string = fixDescriptionText(
-    data?.flavor_text_entries[0].flavor_text,
+    data !== null ? data.flavor_text_entries[0].flavor_text : '',
   );
   return (
     <>

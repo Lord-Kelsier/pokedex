@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './LandingPage/LandingPage';
-import { PaginationContext } from './paginationContext';
+import { PaginationContext, PageData } from './paginationContext';
 import PokemonInfo from './PokemonInfo/PokemonInfo';
 
 export default function Routing() {
-  const [pageData, setPageData] = useState([]);
+  const [pageData, setPageData] = useState<PageData | null>(null);
   return (
     <BrowserRouter>
       <PaginationContext.Provider value={{ pageData, setPageData }}>
