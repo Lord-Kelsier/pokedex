@@ -29,3 +29,13 @@ export const ButtonLoadMore = styled.button`
     transform: translateY(4px);
   }
 `;
+
+export const LandingHeader = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: black;
+`;
+
+export const CardsSection = styled.section`
+  background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+`;
