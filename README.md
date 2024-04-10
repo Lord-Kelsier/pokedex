@@ -6,6 +6,12 @@ Comencé utilizando el template de vite: https://github.com/prettier/eslint-plug
 
 Luego dockerize la aplicacion para asegurarme que se comporta de la misma forma en todos los dispositivos que la vayan a ejecutar.
 
+Los datos se obtienen a partir de la API https://pokeapi.co/
+
+Esta página se encuentra alojada en AWS Amplify y puedes acceder en el siguiente link: https://main.d39w0ornhhbqfs.amplifyapp.com/
+
+## Ejecución
+
 Para ejecutar esta aplicacion debes tener instalado Docker y ejecutar:
 
 `docker compose up`
@@ -32,3 +38,12 @@ Ademas de docker, en esta aplicacion se utiliza:
 - Sorting
 - Boton Sorprendeme
 - Find pokemon
+- Media queries para adaptar el ancho de la pagina
+
+## Estructura de archivos
+
+Dentro de src/ encontraremos que el proyecto se encuentra dividio en distintos elementos.
+
+- `services`: Contiene custom hooks y funciones específicas para la obtencion de datos de la API
+- `shared`: Contiene componentes (styled components) que son utilizados por varias features y contextos de React.
+- `LandingPage` y `PokemonInfo`: Son las features, la pokedex y la informacion especifica de un pokemon respectivamente. Cada feature tiene el componente principal y una carpeta `components` con los JSX components y una carpeta `components/styled-poke-components` con los styled components utilizados por la feature

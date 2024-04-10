@@ -6,7 +6,7 @@ import {
   defaultPaginationContext,
   PageData,
   PaginationContext,
-} from './paginationContext';
+} from './shared/contexts/paginationContext';
 import PokemonInfo from './PokemonInfo/PokemonInfo';
 
 export default function Routing() {

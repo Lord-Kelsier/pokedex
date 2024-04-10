@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 
-import { PaginationContext } from '../paginationContext';
+import { PaginationContext } from '../shared/contexts/paginationContext';
 import { parseFetch } from './parseFetch';
 
 export function useFetch(url: string) {
