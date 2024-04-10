@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import Colors from '../../../shared/theme';
 
 export const HeaderContainer = styled.header`
   background-color: black;
@@ -15,4 +16,30 @@ export const TitleContainer = styled.section`
   justify-content: center;
   align-items: baseline;
   gap: 2%;
+`;
+
+export const PokeInfoSection = styled.section`
+  background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+`;
+
+export const PokeInfoContainer = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+`;
+
+export const PokeImageBaseStatsSection = styled.section`
+  flex-grow: 1;
+  flex-basis: 0;
+`;
+export const PokeStatsSection = styled.section`
+  flex-grow: 1;
+  flex-basis: 0;
+`;
+export const BaseStats = styled.article`
+  background-color: ${Colors.baseStatsBackground};
+  height: 300px;
+  border-radius: 5px;
 `;
