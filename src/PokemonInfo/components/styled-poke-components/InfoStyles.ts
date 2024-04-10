@@ -2,6 +2,8 @@ import { styled } from 'styled-components';
 
 import Colors from '../../../shared/theme';
 import PokeInfoGeneralStats from '../PokeInfoGeneralStats';
+import PokeInfoBaseStats from '../PokeInfoBaseStats';
+import PokeInfoDescription from '../PokeInfoDescription';
 
 export const HeaderContainer = styled.header`
   background-color: black;
@@ -54,4 +56,15 @@ export const PokeStatsStyled = styled(PokeInfoGeneralStats)`
   padding: 5px;
   border-radius: 5px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 `;
+
+export const PokeBaseStatsStyled = styled(PokeInfoBaseStats)`
+  background-color: ${Colors.baseStatsBackground};
+  height: 300px;
+  border-radius: 5px;
+`;
+
+export const PokeDescriptionStyled = styled(PokeInfoDescription)``;
