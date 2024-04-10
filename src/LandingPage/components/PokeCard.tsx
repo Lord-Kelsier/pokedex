@@ -2,12 +2,10 @@ import capitalize from '../../services/pokeApiUtils/capitalize';
 import { defaultPokeIdParser } from '../../services/pokeApiUtils/parseId';
 import { useFetch } from '../../services/useFetch';
 import { NonDecoratedLink } from '../../shared/general-styled-components/Link';
+import { PokeId, PokeImage, PokeName } from '../../shared/poke-styles/pokeStyles';
 import { DefaultPokemon } from './defaultPokemon';
 import {
   CardBox,
-  PokeId,
-  PokeImage,
-  PokeName,
   PokeType,
   PokeTypeContainer,
 } from './styled-poke-components/CardStyles';
@@ -46,8 +44,10 @@ function PokeCard({ pokeUrl, name }: PokeCardArgument) {
     <CardBox>
       <NonDecoratedLink to={`pokemon/${name}`}>
         <PokeImage src={pokemonImageUrl} alt={`${name} image`} />
-        <PokeId>{`N° ${idZeroFilled}`}</PokeId>
-        <PokeName>{capitalizedName}</PokeName>
+        <PokeId weight="bold" size="80%">{`N° ${idZeroFilled}`}</PokeId>
+        <PokeName weight="500" size="150%">
+          {capitalizedName}
+        </PokeName>
         <PokeTypeContainer>{getTypes()}</PokeTypeContainer>
       </NonDecoratedLink>
     </CardBox>

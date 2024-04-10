@@ -3,10 +3,9 @@ import { useParams } from 'react-router-dom';
 import capitalize from '../services/pokeApiUtils/capitalize';
 import { defaultPokeIdParser } from '../services/pokeApiUtils/parseId';
 import { useFetch } from '../services/useFetch';
+import { PokeId, PokeName } from '../shared/poke-styles/pokeStyles';
 import {
   HeaderContainer,
-  PokeId,
-  PokeName,
   TitleContainer,
 } from './components/styled-poke-components/InfoStyles';
 export default function PokemonInfo() {
@@ -18,8 +17,12 @@ export default function PokemonInfo() {
     <>
       <HeaderContainer>
         <TitleContainer>
-          <PokeName>{name}</PokeName>
-          <PokeId>N° {defaultPokeIdParser(data?.id)}</PokeId>
+          <PokeName weight="500" size="150%">
+            {name}
+          </PokeName>
+          <PokeId weight="bold" size="150%">
+            N° {defaultPokeIdParser(data?.id)}
+          </PokeId>
         </TitleContainer>
       </HeaderContainer>
       <h1>{pokeName} </h1>
