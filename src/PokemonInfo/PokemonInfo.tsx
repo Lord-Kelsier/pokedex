@@ -28,7 +28,7 @@ export default function PokemonInfo() {
         <PokeInfoContainer>
           <PokeImageBaseStatsSection>
             <PokeImage src={pokemonImageUrl} />
-            <PokeBaseStatsStyled />
+            <PokeBaseStatsStyled baseStats={data?.stats} />
           </PokeImageBaseStatsSection>
           <PokeStatsSection>
             <PokeDescriptionStyled pokeId={pokemonId} />
