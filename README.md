@@ -1,6 +1,6 @@
-# Pokedex | Examedi
+# Pokedex
 
-Este repositorio consiste en replicar la [Pokedex oficial](https://www.pokemon.com/el/pokedex) como tarea de reclutamiento para [Examedi](https://examedi.cl/).
+Este repositorio consiste en replicar la [Pokedex oficial](https://www.pokemon.com/el/pokedex)
 
 Comencé utilizando el template de vite: https://github.com/prettier/eslint-plugin-prettier
 
@@ -25,20 +25,12 @@ Ademas de docker, en esta aplicacion se utiliza:
 - React con Typescript
 - Styled Components para css
 
-## Avances
+## To do
 
-- Paginacion de 12 elementos por vez
-- Mostrar detalle de Pokemon (Parcial). No se encuentran todas estadisticas de la pagina y los estilos no estan completamente logrados
-- Deployear en AWS Amplify
-- Despues de volver del detalle que la paginacion no se haya alterado (Parcial). La paginacion se conserva pero el scroll vuelve al inicio de la pagina
-
-## No implementado
-
-- Utilizar framework como Next.js
-- Sorting
-- Boton Sorprendeme
-- Find pokemon
-- Media queries para adaptar el ancho de la pagina
+-[ ] Sorting
+-[ ] Boton Sorprendeme
+-[ ] Find pokemon
+-[ ] Media queries para adaptar el ancho de la pagina
 
 ## Estructura de archivos
 
